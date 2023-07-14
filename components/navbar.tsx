@@ -26,7 +26,7 @@ const Navbar = () => {
 
   
   return (
-    <div className={'fixed ease-in duration-300 flex flex-row h-[48px] laptop:h-[64px] w-full text-[#F5F5F5] text-[20px] tablet:justify-between z-50 ' + color}>
+    <div className={'fixed top-0 left-0 ease-in duration-300 flex flex-row h-[48px] laptop:h-[64px] w-screen text-[#F5F5F5] text-[20px] tablet:justify-between z-50 ' + color}>
       <button onTouchEndCapture={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}} onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}} className={'flex content-center items-center ml-10 laptop:ml-[130px] cursor-pointer ' + asap.className}>
         JOSU
       </button>
