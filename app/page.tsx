@@ -7,13 +7,13 @@ import Skills from "@/components/skills"
 
 const Index = () => {
   return (
-    <>
+    <div className="flex flex-col">
       <Hero/>
       <Projects/>
       <Experiences/>
       <Skills/>
       <Contact/>
-    </>
+    </div>
 
   )
 }

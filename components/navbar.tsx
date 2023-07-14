@@ -8,7 +8,7 @@ const Navbar = () => {
   const [color, setColor] = useState('')
   useEffect(() => {
     const changeColor = () => {
-      if(window.scrollY >= 85){
+      if(window.scrollY >= 65){
         setColor('bg-[#181818]')
       } else {
         setColor('')
@@ -26,18 +26,17 @@ const Navbar = () => {
 
   
   return (
-    <nav className={'fixed ease-in duration-100 flex flex-row h-[85px] w-screen text-[#F5F5F5] text-[26px] justify-between z-50 ' + color}>
-      <div onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}} className={'flex content-center items-center ml-[130px] cursor-pointer ' + asap.className}>
+    <div className={'fixed ease-in duration-300 flex flex-row h-[48px] laptop:h-[64px] w-full text-[#F5F5F5] text-[20px] tablet:justify-between z-50 ' + color}>
+      <button onTouchEndCapture={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}} onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}} className={'flex content-center items-center ml-10 laptop:ml-[130px] cursor-pointer ' + asap.className}>
         JOSU
-      </div>
-      <div className='grow-1'/>
-      <ol className={'flex items-center justify-end gap-x-[50px] mr-[130px] ' + crimson.className}>
+      </button>
+      <ol className={'hidden tablet:visible flex-row text-[16px] tablet:flex items-center justify-end ml-[15vw] gap-x-3 laptop:text-[20px] laptop:ml-0 laptop:gap-x-[50px] tablet:mr-[60px] laptop:mr-[130px] ' + crimson.className}>
         <li className='cursor-pointer' onClick={() => {handleClickScroll('projects')}}>Projects</li>
         <li className='cursor-pointer' onClick={() => {handleClickScroll('experiences')}}>Experience</li>
         <li className='cursor-pointer' onClick={() => {handleClickScroll('skills')}}>Skills</li>
         <li className='cursor-pointer' onClick={() => {handleClickScroll('contact')}}>Contact</li>
       </ol>
-    </nav>
+    </div>
   )
 }
 

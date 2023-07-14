@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import HeroImage from '../../assets/hero.png'
-import { Crimson_Pro, Inconsolata } from 'next/font/google'
-import Socials from '@/components/hero/socials'
+import { Crimson_Pro, Inconsolata, Inter } from 'next/font/google'
+import Socials from './socials'
 
 const crimson = Crimson_Pro({ subsets: ['latin']})
 const inconsolata = Inconsolata({ subsets: ['latin']})
+const inter = Inter({ subsets: ['latin']})
 
 const Hero = () => {
   return (
@@ -17,12 +18,17 @@ const Hero = () => {
       <span className='text-[#BDB2CF]'>Software Engineer</span>
       <span>.</span>
     </h1>
-    <div className={'text-xl text-center mb-[70px] ' + inconsolata.className}>
-      <h2 >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</h2>
-      <h2>do eiusmod tempor incididunt ut labore</h2>
+    <div className={'text-xl text-center mb-[50px] flex justify-center ' + inconsolata.className}>
+      <h2 className='w-[80vw] '>"Engineering the digital future, one line of code at a time."</h2>
     </div>
-    <hr className='w-[42vw] mx-[auto] mb-[40px]'/>
-    <div className='absolute left-1/2 z-10'>
+    <hr className='w-[42vw] mx-[auto] mb-[28px]'/>
+
+    <div className='absolute flex flex-col gap-5 left-1/2 z-10'>
+      <div className='relative flex items-center text-[#F5F5F5] justify-center content-center -left-1/2'>
+      <a href='/resume.pdf' className={'text-lg text-center font-medium underline ' + inter.className}>
+            View my resume
+          </a>
+      </div>
     <Socials/>
     </div>
     <Image src={HeroImage} layout='fill' objectFit='cover' alt='hero' />

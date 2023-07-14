@@ -16,9 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html className='overflow-x-hidden'>
-      <body className='flex flex-col'>
+      <body className='flex flex-col justify-evenly'>
         <Navbar/>
+        <div>
         {children}
+        </div>
         <Footer/>
       </body>
     </html>
