@@ -2,10 +2,10 @@ import fs from 'fs';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
-  const query = new URL(request.url).searchParams;
-  const queryParam = query.get('id');
+  const { searchParams } = new URL(request.url)
+  const id = searchParams.get('id')
   try {
-    const files = fs.readdirSync('./public/projects/' + queryParam);
+    const files = fs.readdirSync('./public/projects/' + id);
     const fileCount = files.length;
     return new NextResponse(JSON.stringify({ count: fileCount }));
   } catch (error) {
