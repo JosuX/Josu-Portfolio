@@ -22,7 +22,7 @@ const Contact = () => {
           </div>
           </div>
           <div className='self-center'>
-          <Link href='/resume.pdf' className={'text-lg font-medium underline ' + inter.className}>
+          <Link href='/resume.pdf' className={'text-lg font-medium underline ' + inter.className} prefetch={false}>
             View my resume
           </Link>
           </div>
