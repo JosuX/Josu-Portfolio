@@ -35,40 +35,24 @@ const nextConfig = {
         return [
           {
             source: '/facebook',
-            has: [{
-              type: 'header',
-              key: 'x-redirect-me'
-            }],
             destination: 'https://www.facebook.com/josuX00/',
             permanent: false,
             basePath: false
           },
           {
             source: '/instagram',
-            has: [{
-              type: 'header',
-              key: 'x-redirect-me'
-            }],
             destination: 'https://www.instagram.com/lazyjosu/',
             permanent: false,
             basePath: false,
           },
           {
             source: '/linkedin',
-            has: [{
-              type: 'header',
-              key: 'x-redirect-me'
-            }],
             destination: 'https://www.linkedin.com/in/josu00/',
             permanent: false,
             basePath: false
           },
           {
             source: '/github',
-            has: [{
-              type: 'header',
-              key: 'x-redirect-me'
-            }],
             destination: 'https://github.com/JosuX',
             permanent: false,
             basePath: false
