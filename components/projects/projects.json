@@ -1,38 +1,47 @@
 {
     "Albie": {
         "summary": "A photo album file explorer with social media sharing functions built using Python and PyQt2.",
-        "role": "Software Developer"
+        "role": "Software Developer",
+        "id": "albie"
     },
     "Amplify": {
         "summary": "Built for a submission on the competition, Impact Hackathon 2021 Smart Cities. An application that can flag locations in the community that needs local government assistance built using Python and PyQt3.",
-        "role": "Software Developer"
+        "role": "Software Developer",
+        "id": "amplify"
     },
     "Virtual Reality Evaluation for Driving Students": {
         "summary": "An application that uses VR environment and experience that could help driving instructors evaluate their students in their knowledge in road laws and etiquette. Built using Unity and C# Language.",
-        "role": "Software Developer"
+        "role": "Software Developer",
+        "id": "vreds"
     },
     "Percent Off": {
         "summary": "A mobile application that connects users and food businesses. It allows the user to buy a large sum of food of the unsold stock of the food businesses for a small price. Built using Flutter, and Firebase.",
-        "role": "Mobile Developer"
+        "role": "Mobile Developer",
+        "id": "percent"
     },
     "E-Sensei": {
         "summary": "A forum-like mobile application allowing mentors to answer mentees questions in a specific subject. Built using Flutter, and Firebase.",
-        "role": "Mobile Developer"
+        "role": "Mobile Developer",
+        "id": "esensei"
     },
     "Visitor Checklist Mobile App": {
         "summary": "Dealt with the backend development of the app and the generation of the pdf file through different platforms.",
-        "role": "Backend Developer"
+        "role": "Backend Developer",
+        "id": "meatworld"
     },
     "Web-Based App Bus Monitoring System": {
         "summary": "Dealt with the backend development of the website.  it tracks the location of the bus with the use of a device, with the help of Leaflet API to view the map. Built using React.",
-        "role": "Backend Developer"
+        "role": "Backend Developer",
+        "id": "ube"
     },
     "Heartomatic": {
         "summary": "Developed a desktop application which would open a socket server and receive data from a WiFi-based pulse oximeter monitoring the heartbeats of patients. Built using C#.",
-        "role": "Software Developer"
+        "role": "Software Developer",
+        "id": "heartomatic"
     },
     "Wards": {
         "summary": "Developed a desktop application which would open a socket server and receive data from a device that detects vacancy of a hospital room and which can be send manually through the desktop application. Built using C#",
-        "role": "Software Developer"
+        "role": "Software Developer",
+        "id": "wards"
     }
 }

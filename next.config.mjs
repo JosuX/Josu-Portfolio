@@ -2,6 +2,15 @@ import million from "million/compiler";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  webpack: (config) => {
+    config.resolve = {
+      ...config.resolve,
+      fallback: {
+        fs: false,
+      },
+    };
+    return config;
+  },
   reactStrictMode: true,
     compiler: {
       // Enables the styled-components SWC transform
