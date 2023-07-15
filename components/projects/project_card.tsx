@@ -6,7 +6,6 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { crimson, inconsolata } from '@/app/fonts';
-import { block } from 'million/react';
 
 function fetchData(url: string) {
   return fetch(url)
@@ -32,7 +31,7 @@ type Props = {
   index: number;
 };
 
-const ProjectCard: React.FC<Props> = block(({ name, summary, role, index, id }) => {
+const ProjectCard: React.FC<Props> = ({ name, summary, role, index, id }) => {
   const [count, setCount] = useState(0);
   const [photos, setPhotos] = useState<string[]>([]);
 
@@ -48,8 +47,9 @@ const ProjectCard: React.FC<Props> = block(({ name, summary, role, index, id }) 
   }, [count, id]);
 
   return (
+    <>
     <div className='flex flex-col justify-start mx-[118px] gap-y-16 mb-10 laptop:mb-20'>
-    <div className='flex flex-row justify-center gap-10 laptop:gap-20'>
+    <div className='flex flex-row justify-start gap-10 laptop:gap-20'>
         <div className='flex flex-col w-[40vw] laptop:w-[27vw]'>
             <h4 className={'text-lg laptop:text-xl ' + crimson.className}>Project Title</h4>
             <h3 className={'text-xl laptop:text-4xl font-semibold ' + inconsolata.className}>{name}</h3>
@@ -60,11 +60,11 @@ const ProjectCard: React.FC<Props> = block(({ name, summary, role, index, id }) 
         </div>
     </div>
     <div className={index%2 == 0 ? 'flex flex-col-reverse items-center laptop:flex-row-reverse justify-between gap-10' : 'flex flex-col-reverse items-center laptop:flex-row justify-between gap-10'}>
-        <div className='w-[85vw] flex flex-col place laptop:w-[20vw] '>
+        <div className={count !== 0 ? 'w-[85vw] flex flex-col place laptop:w-[20vw]' : 'w-[85vw] flex flex-col place laptop:w-[85vw]'}>
             <h4 className={'text-md laptop:text-lg text-center  ' + crimson.className}>Summary</h4>
             <h3 className={'text-lg laptop:text-xl font-semibold text-justify ' + inconsolata.className}>{summary}</h3>
         </div>
-        <div className='w-[95vw] laptop:w-[65vw]'>
+        {count !== 0 ? (<div className='w-[95vw] laptop:w-[65vw]'>
         <Swiper
         loop={false}
         effect={'coverflow'}
@@ -82,17 +82,19 @@ const ProjectCard: React.FC<Props> = block(({ name, summary, role, index, id }) 
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
-        {count !== 0 ? photos.map((photo, index) => (
+        {photos.map((photo, index) => (
           <SwiperSlide key={index}>
             <img src={photo} alt={`Slide ${index + 1}`} />
           </SwiperSlide>
-        )) : <></>}
+        ))}
       </Swiper>
-    </div>
+    </div>) : <></>}
     </div>
 
 </div>
+<hr className='w-[85vw] my-12 bg-[#BDB2CF]'/>
+</>
   )
-})
+}
 
 export default ProjectCard
