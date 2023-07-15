@@ -37,7 +37,11 @@ const ProjectCard: React.FC<Props> = ({ name, summary, role, index, id }) => {
 
   useEffect(() => {
     fetchData('https://josu-portfolio.vercel.app/api?id=' + id).then((data) => {
-      setCount(data.count);
+      if(data === undefined){
+        return
+      } else {
+        setCount(data.count);
+      }
     });
   }, []);
 
