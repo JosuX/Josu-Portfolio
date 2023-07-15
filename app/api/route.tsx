@@ -1,13 +1,11 @@
 import fs from 'fs';
 import { NextRequest, NextResponse } from 'next/server';
-import { useSearchParams } from 'next/navigation'
 
 export async function GET(request: NextRequest) {
-  const searchParams = useSearchParams()
-  const id = searchParams.get('id')
-  console.log(id)
+  const query = new URL(request.url).searchParams;
+  const queryParam = query.get('id');
   try {
-    const files = fs.readdirSync('.public/projects/' + id);
+    const files = fs.readdirSync('./public/projects/' + queryParam);
     const fileCount = files.length;
     return new NextResponse(JSON.stringify({ count: fileCount }));
   } catch (error) {
