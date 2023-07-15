@@ -22,9 +22,9 @@ const Hero = () => {
 
     <div className='absolute flex flex-col gap-5 left-1/2 z-10'>
       <div className='relative flex items-center text-[#F5F5F5] justify-center content-center -left-1/2'>
-      <Link href='/resume.pdf' className={'text-lg text-center font-medium underline ' + inter.className}>
+      <a href='/resume.pdf' className={'text-lg text-center font-medium underline ' + inter.className}>
             View my resume
-          </Link>
+          </a>
       </div>
     <Socials/>
     </div>
