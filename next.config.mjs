@@ -16,14 +16,6 @@ const nextConfig = {
       // Enables the styled-components SWC transform
       styledComponents: true
     },
-    async rewrites() {
-      return [
-        {
-          source: '/:path*',
-          destination: 'https://josu-portfolio.vercel.app/:path*',
-        },
-      ]
-    },
     async redirects() {
         return [
           {
