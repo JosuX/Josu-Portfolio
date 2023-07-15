@@ -1,4 +1,3 @@
-'use client'
 import fs from 'fs';
 import { NextRequest, NextResponse } from 'next/server';
 import { useSearchParams } from 'next/navigation'
