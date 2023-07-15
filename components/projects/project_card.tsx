@@ -50,7 +50,7 @@ const ProjectCard: React.FC<Props> = ({ name, summary, role, index, id }) => {
   return (
     <>
     <div className='flex flex-col justify-start mx-[118px] gap-y-16 mb-10 laptop:mb-20'>
-    <div className='flex flex-row justify-start gap-10 laptop:gap-20'>
+    <div className='flex flex-row justify-center laptop:justify-start gap-10 laptop:gap-20'>
         <div className='flex flex-col w-[40vw] laptop:w-[27vw]'>
             <h4 className={'text-lg laptop:text-xl ' + crimson.className}>Project Title</h4>
             <h3 className={'text-xl laptop:text-4xl font-semibold ' + inconsolata.className}>{name}</h3>
