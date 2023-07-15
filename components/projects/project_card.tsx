@@ -11,7 +11,7 @@ function fetchData(url: string) {
   return fetch(url)
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Network response was not OK');
+        return
       }
       return response.json();
     })
@@ -61,7 +61,7 @@ const ProjectCard: React.FC<Props> = ({ name, summary, role, index, id }) => {
         </div>
     </div>
     <div className={index%2 == 0 ? 'flex flex-col-reverse items-center laptop:flex-row-reverse justify-between gap-10' : 'flex flex-col-reverse items-center laptop:flex-row justify-between gap-10'}>
-        <div className={count !== 0 ? 'w-[85vw] flex flex-col place laptop:w-[20vw]' : 'w-[85vw] flex flex-col place laptop:w-[85vw]'}>
+        <div className={count !== 0 ? 'w-[85vw] flex flex-col place laptop:w-[20vw]' : 'w-[85vw] flex flex-col place laptop:w-[75vw]'}>
             <h4 className={'text-md laptop:text-lg text-center  ' + crimson.className}>Summary</h4>
             <h3 className={'text-lg laptop:text-xl font-semibold text-justify ' + inconsolata.className}>{summary}</h3>
         </div>
