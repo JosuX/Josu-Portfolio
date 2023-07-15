@@ -1,8 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { Crimson_Pro, Asap } from 'next/font/google'
-const crimson = Crimson_Pro({ subsets: ['latin']})
-const asap = Asap({subsets: ['latin'], weight: '600'})
+import { crimson, asap } from '@/app/fonts'
+
 
 const Navbar = () => {
   const [color, setColor] = useState('')

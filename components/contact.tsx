@@ -1,11 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import ContactImage from '../assets/contact.jpg'
-import { Crimson_Pro, Inconsolata, Inter } from 'next/font/google'
-
-const crimson = Crimson_Pro({ subsets: ['latin']})
-const inconsolata = Inconsolata({ subsets: ['latin']})
-const inter = Inter({ subsets: ['latin']})
+import { crimson, inter, inconsolata } from '@/app/fonts'
 
 const Contact = () => {
   return (
@@ -18,16 +15,16 @@ const Contact = () => {
           <h4 className={'text-lg font-semibold mb-[20px] self-center ' + crimson.className}>Let's Connect!</h4>
           <div className='text-center self-center items-center'>
           <h5 className={'text-md text-center font-medium w-[519px] ' + inconsolata.className}>
-              <a href = "mailto: abc@example.com">joferusa43@gmail.com</a>
+              <Link href = "mailto: abc@example.com">joferusa43@gmail.com</Link>
                 <span>&nbsp;|&nbsp;</span>
-              <a href="tel:+639274659570">+639274659570</a>
+              <Link href="tel:+639274659570">+639274659570</Link>
             </h5>
           </div>
           </div>
           <div className='self-center'>
-          <a href='/resume.pdf' className={'text-lg font-medium underline ' + inter.className}>
+          <Link href='/resume.pdf' className={'text-lg font-medium underline ' + inter.className}>
             View my resume
-          </a>
+          </Link>
           </div>
 
         </div>

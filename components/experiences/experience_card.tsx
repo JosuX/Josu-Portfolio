@@ -1,16 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 import Experience from '../../assets/exp.gif'
-import { Crimson_Pro, Inconsolata } from 'next/font/google'
+import { crimson, inconsolata } from '@/app/fonts'
 
 
-const crimson = Crimson_Pro({ subsets: ['latin']})
-const inconsolata = Inconsolata({ subsets: ['latin']})
 
 const ExperienceCard = () => {
   return (
-    <div className='flex flex-col-reverse laptop:flex-row justify-between w-[80vw] gap-8'>
-    <div className='flex flex-col justify-between h-auto gap-5 laptop:gap-0'>
+    <div className='flex flex-col-reverse laptop:flex-row justify-between laptop:items-center w-[80vw] gap-8'>
+    <div className='flex flex-col justify-between h-auto gap-5 laptop:gap-3'>
         <div>
         <h4 className={'text-xl ' + crimson.className}>Company</h4>
     <h3 className={'text-3xl font-semibold ' + inconsolata.className}>IT Americano Inc.</h3>

@@ -2,7 +2,7 @@ import Navbar from '@/components/navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import Footer from '@/components/footer'
-import Head from 'next/head';
+import { crimson, inconsolata, inter } from './fonts'
 
 export const metadata: Metadata = {
   title: 'Jofer Usa',

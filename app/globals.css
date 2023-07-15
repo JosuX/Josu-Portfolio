@@ -6,3 +6,7 @@ html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
 }
+
+.hero {
+    @apply relative h-screen w-screen bg-[#181818] overflow-hidden text-[#F5F5F5] flex justify-center items-center
+}

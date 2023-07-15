@@ -1,11 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import SkillsGIF from '../assets/skills.gif'
-import { Crimson_Pro, Inconsolata } from 'next/font/google'
-
-
-const crimson = Crimson_Pro({ subsets: ['latin']})
-const inconsolata = Inconsolata({ subsets: ['latin']})
+import { crimson, inconsolata } from '@/app/fonts'
 
 const Skills = () => {
   return (

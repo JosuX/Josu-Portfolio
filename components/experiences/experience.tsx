@@ -1,9 +1,6 @@
 import React from 'react'
-import { Crimson_Pro } from 'next/font/google'
+import { crimson } from '@/app/fonts'
 import ExperienceCard from './experience_card'
-
-
-const crimson = Crimson_Pro({ subsets: ['latin']})
 
 const Experiences = () => {
   return (

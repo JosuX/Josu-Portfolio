@@ -1,5 +1,8 @@
+import million from "million/compiler";
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
+  reactStrictMode: true,
     compiler: {
       // Enables the styled-components SWC transform
       styledComponents: true
@@ -33,3 +36,7 @@ module.exports = {
         ]
       },
   }
+
+  
+export default million.next(nextConfig);
+
