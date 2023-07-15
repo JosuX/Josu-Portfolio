@@ -1,9 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { crimson, asap } from '@/app/fonts'
+import { block } from "million/react";
 
 
-const Navbar = () => {
+const Navbar = block(() => {
   const [color, setColor] = useState('')
   useEffect(() => {
     const changeColor = () => {
@@ -37,6 +38,6 @@ const Navbar = () => {
       </ol>
     </div>
   )
-}
+})
 
 export default Navbar

@@ -4,12 +4,9 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
-import { Crimson_Pro, Inconsolata } from 'next/font/google'
+import { crimson, inconsolata } from '@/app/fonts';
 import { block } from "million/react";
 
-
-const crimson = Crimson_Pro({ subsets: ['latin']})
-const inconsolata = Inconsolata({ subsets: ['latin'], weight: '600'})
 
 type Props = {name: string, summary: string, role: string, index: number};
 
