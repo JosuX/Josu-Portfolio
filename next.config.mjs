@@ -35,6 +35,10 @@ const nextConfig = {
         return [
           {
             source: '/facebook',
+            has: [{
+              type: 'header',
+              key: 'x-redirect-me'
+            }],
             destination: 'https://www.facebook.com/josuX00/',
             permanent: false,
             basePath: false
@@ -43,7 +47,7 @@ const nextConfig = {
             source: '/instagram',
             destination: 'https://www.instagram.com/lazyjosu/',
             permanent: false,
-            basePath: false
+            basePath: false,
           },
           {
             source: '/linkedin',
