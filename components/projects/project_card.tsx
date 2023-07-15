@@ -37,7 +37,7 @@ const ProjectCard: React.FC<Props> = block(({ name, summary, role, index, id }) 
   const [photos, setPhotos] = useState<string[]>([]);
 
   useEffect(() => {
-    fetchData('https://josu-portfolio.vercel.app/api').then((data) => {
+    fetchData('https://josu-portfolio.vercel.app/api?id=' + id).then((data) => {
       setCount(data.count);
     });
   }, []);
