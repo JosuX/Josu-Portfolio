@@ -66,14 +66,14 @@ const ProjectCard: React.FC<Props> = block(({ name, summary, role, index, id }) 
         </div>
         <div className='w-[95vw] laptop:w-[65vw]'>
         <Swiper
-        loop={true}
+        loop={false}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={1.25}
         coverflowEffect={{
           rotate: 50,
-          stretch: 1,
+          stretch: 0,
           depth: 100,
           modifier: 1,
           slideShadows: true,
@@ -82,11 +82,11 @@ const ProjectCard: React.FC<Props> = block(({ name, summary, role, index, id }) 
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
-        {photos.map((photo, index) => (
+        {count !== 0 ? photos.map((photo, index) => (
           <SwiperSlide key={index}>
             <img src={photo} alt={`Slide ${index + 1}`} />
           </SwiperSlide>
-        ))}
+        )) : <></>}
       </Swiper>
     </div>
     </div>
