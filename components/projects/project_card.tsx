@@ -68,6 +68,7 @@ const ProjectCard: React.FC<Props> = ({ name, summary, role, index, id }) => {
         {count !== 0 ? (<div className='w-[95vw] laptop:w-[65vw]'>
         <Swiper
         loop={false}
+        initialSlide={count/2}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
