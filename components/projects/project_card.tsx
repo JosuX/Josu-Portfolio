@@ -18,9 +18,6 @@ function fetchData(url: string) {
     .then((data) => {
       return data;
     })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
 }
 
 type Props = {
